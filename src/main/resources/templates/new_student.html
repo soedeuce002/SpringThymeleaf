@@ -14,20 +14,20 @@
     <table>
         <tr>
             <td>First Name:</td>
-            <td><!--/*@thymesVar id="firstName" type="com"*/-->
-            <input type="text" th:text="${firstName}" /><!-- first_name text field --></td>
+            <td>
+            <input type="text" th:text="${firstName}" name="firstName"/><!-- first_name text field --></td>
         </tr>
         <tr>
             <td>Last Name:</td>
-            <td> <!--/*@thymesVar id="lastName" type="com"*/-->
-            <input type="text" th:text="${lastName}" /><!-- last_name text field --></td>
+            <td>
+            <input type="text" th:text="${lastName}" name="lastName"/><!-- last_name text field --></td>
         </tr>
         <tr>
             <td>Grade:</td>
             <td>
                 <select name="grade">
                     <!-- thymeleaf option tag -->
-                    <!--/*@thymesVar id="grades" type="com"*/-->
+
                     <option th:each="grade : ${grades}"
                             th:value="${grade}"
                             th:text="${grade}"></option>
